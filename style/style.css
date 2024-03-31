@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300&family=Poppins&family=Roboto&display=swap');
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.line {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: blue !important;
+}
+
+.line::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: blue;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.line:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.shadow-box {
+    box-shadow: 0 7px 14px 0 rgba(255, 255, 255, 0.2), 0 3px 6px 0 rgba(0, 76, 255, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+}
+
+.prj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+@media (max-width: 575.98px) {
+    .subtext {
+        width: 300px !important;
+    }
+
+    .front-img {
+        width: 300px;
+    }
+
+    .abc {
+        display: none;
+    }
+
+    .chat {
+        padding-top: 15px !important;
+        padding-left: 0px !important;
+    }
+
+    .phone {
+        flex-direction: column !important;
+    }
+}
